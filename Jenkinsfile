@@ -31,8 +31,8 @@ tools {
     stage('Docker Build and Push') {
       steps {
           sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-          sh 'docker build -t codedecode25/food-delivery-app-fe:${VERSION} .'
-          sh 'docker push codedecode25/food-delivery-app-fe:${VERSION}'
+          sh 'docker build -t kbarathkumar/food-delivery-app-fe:${VERSION} .'
+          sh 'docker push kbarathkumar/food-delivery-app-fe:${VERSION}'
       }
     }
 
